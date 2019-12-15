@@ -1,3 +1,6 @@
+output "dns_domain" {
+    value = var.dns_domain_name
+}
 # output "dns" {
 #     value = {
 #         "id": alicloud_dns.infra.name,
