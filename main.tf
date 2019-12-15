@@ -42,7 +42,7 @@ resource "alicloud_dns_record" "aliyundm-mail" {
     name        = var.dns_domain_name
     host_record = "aliyundm.mail"
     type        = "TXT"
-    value       = "40e907d7419a4cb884e4"
+    value       = var.dns_aliyundm_mail_value
     ttl         = "600"
     priority    = "10"
     routing     = "default"     # default|telecom|unicom|mobile|oversea|edu|drpeng|btvn 

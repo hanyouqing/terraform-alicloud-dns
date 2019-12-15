@@ -1,3 +1,4 @@
+
 module "dns" {
     # source = "hanyouqing/dns/alicloud" 
     source = "../../../dns"
@@ -8,4 +9,5 @@ module "dns" {
     dns_develop_value   = var.dns_develop_value
     dns_testing_value   = var.dns_testing_value
     dns_staging_value   = var.dns_staging_value
+    dns_aliyundm_mail_value = var.dns_aliyundm_mail_value
 }

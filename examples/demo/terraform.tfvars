@@ -1,3 +1,4 @@
+# dns variables
 dns_group           = "icmdb"
 dns_domain_name     = "icmdb.top"
 dns_inc_value       = "192.168.1.1"

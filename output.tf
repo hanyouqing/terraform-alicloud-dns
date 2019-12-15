@@ -13,9 +13,9 @@
 #         "name": alicloud_dns_group.infra.name,
 #     }
 # }
-output "dns_record" {
-    value = {
-        "inc": {
+output "dns_records" {
+    value = [
+        {
             "id": alicloud_dns_record.inc.id,
             "name": alicloud_dns_record.inc.name,
             "type": alicloud_dns_record.inc.type,
@@ -27,7 +27,19 @@ output "dns_record" {
             "status": alicloud_dns_record.inc.status,
             "locked": alicloud_dns_record.inc.locked,
         },
-        "www": {
+        {
+            "id": alicloud_dns_record.inc.id,
+            "name": alicloud_dns_record.inc.name,
+            "type": alicloud_dns_record.inc.type,
+            "host_record": alicloud_dns_record.inc.host_record,
+            "value": alicloud_dns_record.inc.value,
+            "ttl": alicloud_dns_record.inc.ttl,
+            "priority": alicloud_dns_record.inc.priority,
+            "routing": alicloud_dns_record.inc.routing,
+            "status": alicloud_dns_record.inc.status,
+            "locked": alicloud_dns_record.inc.locked,
+        },
+        {
             "id": alicloud_dns_record.www.id,
             "name": alicloud_dns_record.www.name,
             "type": alicloud_dns_record.www.type,
@@ -39,7 +51,7 @@ output "dns_record" {
             "status": alicloud_dns_record.www.status,
             "locked": alicloud_dns_record.www.locked,
         },
-        "aliyundm-mail": {
+        {
             "id": alicloud_dns_record.aliyundm-mail.id,
             "name": alicloud_dns_record.aliyundm-mail.name,
             "type": alicloud_dns_record.aliyundm-mail.type,
@@ -51,7 +63,7 @@ output "dns_record" {
             "status": alicloud_dns_record.aliyundm-mail.status,
             "locked": alicloud_dns_record.aliyundm-mail.locked,
         },
-        "dmtrace": {
+        {
             "id": alicloud_dns_record.dmtrace.id,
             "name": alicloud_dns_record.dmtrace.name,
             "type": alicloud_dns_record.dmtrace.type,
@@ -63,7 +75,7 @@ output "dns_record" {
             "status": alicloud_dns_record.dmtrace.status,
             "locked": alicloud_dns_record.dmtrace.locked,
         },
-        "mail-txt": {
+        {
             "id": alicloud_dns_record.mail-txt.id,
             "name": alicloud_dns_record.mail-txt.name,
             "type": alicloud_dns_record.mail-txt.type,
@@ -75,7 +87,7 @@ output "dns_record" {
             "status": alicloud_dns_record.mail-txt.status,
             "locked": alicloud_dns_record.mail-txt.locked,
         },
-        "local": {
+        {
             "id": alicloud_dns_record.local.id,
             "name": alicloud_dns_record.local.name,
             "type": alicloud_dns_record.local.type,
@@ -87,7 +99,7 @@ output "dns_record" {
             "status": alicloud_dns_record.local.status,
             "locked": alicloud_dns_record.local.locked,
         },
-        "develop": {
+        {
             "id": alicloud_dns_record.develop.id,
             "name": alicloud_dns_record.develop.name,
             "type": alicloud_dns_record.develop.type,
@@ -99,7 +111,7 @@ output "dns_record" {
             "status": alicloud_dns_record.develop.status,
             "locked": alicloud_dns_record.develop.locked,
         },
-        "testing": {
+        {
             "id": alicloud_dns_record.testing.id,
             "name": alicloud_dns_record.testing.name,
             "type": alicloud_dns_record.testing.type,
@@ -111,7 +123,7 @@ output "dns_record" {
             "status": alicloud_dns_record.testing.status,
             "locked": alicloud_dns_record.testing.locked,
         },
-        "staging": {
+        {
             "id": alicloud_dns_record.staging.id,
             "name": alicloud_dns_record.staging.name,
             "type": alicloud_dns_record.staging.type,
@@ -123,5 +135,5 @@ output "dns_record" {
             "status": alicloud_dns_record.staging.status,
             "locked": alicloud_dns_record.staging.locked,
         },
-    }
+    ]
 }
