@@ -7,12 +7,12 @@
 #         "dns_server ": alicloud_dns.infra.dns_server,
 #     }
 # }
-output "dns_group" {
-    value = {
-        "id": alicloud_dns_group.infra.id,
-        "name": alicloud_dns_group.infra.name,
-    }
-}
+# output "dns_group" {
+#     value = {
+#         "id": alicloud_dns_group.infra.id,
+#         "name": alicloud_dns_group.infra.name,
+#     }
+# }
 output "dns_record" {
     value = {
         "inc": {

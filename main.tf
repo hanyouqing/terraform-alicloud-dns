@@ -3,9 +3,9 @@
 #   https://www.terraform.io/docs/providers/alicloud/r/dns_group.html
 #   https://www.terraform.io/docs/providers/alicloud/r/dns_record.html
 #   
-resource "alicloud_dns_group" "infra" {
-    name        = var.dns_group
-}
+# resource "alicloud_dns_group" "infra" {
+#     name        = var.dns_group
+# }
 # resource "alicloud_dns" "infra" {
 #     name        = var.dns_domain_name
 #     group_id    = alicloud_dns_group.infra.id
