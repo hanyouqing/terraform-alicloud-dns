@@ -2,7 +2,10 @@
 #   https://www.terraform.io/docs/providers/alicloud/r/dns.html
 #   https://www.terraform.io/docs/providers/alicloud/r/dns_group.html
 #   https://www.terraform.io/docs/providers/alicloud/r/dns_record.html
-#   
+#
+provider "alicloud" {
+    version = ">= 1.64"
+}
 # resource "alicloud_dns_group" "infra" {
 #     name        = var.dns_group
 # }
