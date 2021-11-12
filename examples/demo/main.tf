@@ -1,7 +1,7 @@
 
 module "dns" {
     # source = "hanyouqing/dns/alicloud" 
-    source = "../../../dns"
+    source = "../../"
     dns_group           = var.dns_group
     dns_domain_name     = var.dns_domain_name
     dns_inc_value       = var.dns_inc_value
